@@ -12,14 +12,14 @@ nav.style.height="10%"
 nav.style.backgroundColor="#ffffff"
 
 main.style.width="100%"
-main.style.height="85%"
+main.style.height="83%"
 main.style.backgroundColor="green"
 main.style.display="flex"
 main.style.justifyContent="center"
 main.style.flexDirection="column"
 
 footer.style.width="100%"
-footer.style.height="5%"
+footer.style.height="7%"
 footer.style.backgroundColor="#CCCCCC"
 
 
@@ -29,8 +29,23 @@ document.body.appendChild(footer)
 
 /********************************************************* */
 addElementmain(main)
+addTermsAndConditions(footer)
 
 }
+
+function addTermsAndConditions(footer){
+    var termCond = document.createElement("h2");
+    termCond.style.width="80px"
+    termCond.style.height="20px"
+    termCond.style.margin="auto"
+    termCond.style.color="#000000"
+    termCond.style.fontSize="14px"
+    nameServices.style.border="1px solid red"
+    termCond.style.textAlign="center"
+    footer.appendChild(termCond)
+}
+    
+
 
 
 function addElementmain(main){
@@ -158,4 +173,9 @@ function addnameSection(services,aboutme,budget,contact){
     aboutme.appendChild(nameAboutMe)
     budget.appendChild(nameBudget)
     contact.appendChild(nameContact)
+
+
+
+ 
 }
+
