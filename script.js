@@ -1,33 +1,50 @@
 document.body.onload=addElement;
 
 
-var btn=document.createElement("footer")
-btn.style.width="100px"
-btn.style.height="100px"
-btn.style.background="red"
-btn.style.position="absolud"
-btn.style.top="0%"
+//var btn=document.createElement("footer")
+// btn.style.width="100px"
+// btn.style.height="100px"
+// btn.style.background="red"
+// btn.style.position="absolud"
+// btn.style.top="0%"
 
 
 
-var btn1=document.createElement("footer")
-btn1.style.width="50px"
-btn1.style.height="50px"
-btn1.style.background="blue"
-btn1.style.position="absolud"
-btn1.style.top="0%"
-document.body.appendChild(btn)
-btn.appendChild(btn1)
+// var btn1=document.createElement("footer")
+// btn1.style.width="50px"
+// btn1.style.height="50px"
+// btn1.style.background="blue"
+// btn1.style.position="absolud"
+// btn1.style.top="0%"
+// document.body.appendChild(btn)
+// btn.appendChild(btn1)
 
 
-btn.addEventListener("mouseover",()=>{
-    btn1.style.background="yellow"
-    btn1.style.transition="all 1s ease-in-out"
-})
-btn.addEventListener("mouseout",()=>{
-    btn1.style.background="red"
-    btn1.style.transition="all 1s ease-in-out"
-})
+// btn.addEventListener("mouseover",()=>{
+//     btn1.style.background="yellow"
+//     btn1.style.transition="all 1s ease-in-out"
+// })
+// btn.addEventListener("mouseout",()=>{
+//     btn1.style.background="red"
+//     btn1.style.transition="all 1s ease-in-out"
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function addElement(){
 
@@ -37,7 +54,11 @@ var footer=document.createElement("footer")
 
 nav.style.width="100%"
 nav.style.height="10%"
+nav.style.display="flex"
+nav.style.justifyContent="center"
+nav.style.alignItems="center"
 nav.style.backgroundColor="#ffffff"
+
 
 main.style.width="100%"
 main.style.height="83%"
@@ -59,10 +80,52 @@ document.body.appendChild(main)
 document.body.appendChild(footer)
 
 /********************************************************* */
+addNavbar(nav)
 addElementmain(main)
 addTermsAndConditions(footer)
+}
+
+function addNavbar(nav){
+    var navbar = document.createElement("div");
+    var list = document.createElement("div");
+    var socialnetwork = document.createElement("div");
+
+    navbar.style.width="30%"
+    navbar.style.height="100%"
+    navbar.style.display="flex"
+    navbar.style.justifyContent="center"
+    navbar.style.alignItems="center"
+
+    list.style.width="40%"
+    list.style.height="100%"
+    list.style.backgroundColor="yellow"
+    
+
+    socialnetwork.style.width="30%"
+    socialnetwork.style.height="100%"
+    socialnetwork.style.backgroundColor="blue"
+  
+
+    nav.appendChild(navbar)
+    nav.appendChild(list)
+    nav.appendChild(socialnetwork)
+
+    addImgTitle(navbar) 
+}
+function addImgTitle(navbar){
+
+    var image = document.createElement("img");
+
+    image.src = "./image/Nombre.png";
+    image.width =300;
+    image.height =65;
+    navbar.appendChild(image);
 
 }
+
+
+
+
 
 function addTermsAndConditions(footer){
     var termCond = document.createElement("h2");
