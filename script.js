@@ -1,8 +1,36 @@
 document.body.onload=addElement;
 
 
+var btn=document.createElement("footer")
+btn.style.width="100px"
+btn.style.height="100px"
+btn.style.background="red"
+btn.style.position="absolud"
+btn.style.top="0%"
+
+
+
+var btn1=document.createElement("footer")
+btn1.style.width="50px"
+btn1.style.height="50px"
+btn1.style.background="blue"
+btn1.style.position="absolud"
+btn1.style.top="0%"
+document.body.appendChild(btn)
+btn.appendChild(btn1)
+
+
+btn.addEventListener("mouseover",()=>{
+    btn1.style.background="yellow"
+    btn1.style.transition="all 1s ease-in-out"
+})
+btn.addEventListener("mouseout",()=>{
+    btn1.style.background="red"
+    btn1.style.transition="all 1s ease-in-out"
+})
 
 function addElement(){
+
 var nav=document.createElement("nav")
 var main=document.createElement("main")
 var footer=document.createElement("footer")
@@ -18,8 +46,11 @@ main.style.display="flex"
 main.style.justifyContent="center"
 main.style.flexDirection="column"
 
+
 footer.style.width="100%"
 footer.style.height="7%"
+footer.style.display="flex"
+footer.style.justifyContent="center"
 footer.style.backgroundColor="#CCCCCC"
 
 
@@ -35,17 +66,17 @@ addTermsAndConditions(footer)
 
 function addTermsAndConditions(footer){
     var termCond = document.createElement("h2");
-    termCond.style.width="80px"
+
+    termCond.style.maxWidth="500px"
     termCond.style.height="20px"
-    termCond.style.margin="auto"
     termCond.style.color="#000000"
     termCond.style.fontSize="14px"
-    nameServices.style.border="1px solid red"
-    termCond.style.textAlign="center"
+    termCond.classList.add('inter');
+    termCond.innerText="© copyright  P&R soluciones Informaticas | All rights reserved"
     footer.appendChild(termCond)
+  
 }
     
-
 
 
 function addElementmain(main){
@@ -83,9 +114,9 @@ function addElementmain(main){
 
 
     addElementmainSection(div,div1)
-
 }
 function addElementmainSection(div,div1){
+
     var services=document.createElement("div")
     var aboutme=document.createElement("div")
     var budget=document.createElement("div")
@@ -96,12 +127,14 @@ function addElementmainSection(div,div1){
     services.style.backgroundColor="#400335"
     services.style.justifyContent="center"
     services.style.alignContent="center"
+    //services.style.cursor="pointer"
 
     aboutme.style.width="50%"
     aboutme.style.height="100%"
     aboutme.style.backgroundColor="#000000"
     aboutme.style.justifyContent="center"
     aboutme.style.alignContent="center"
+    //aboutme.style.cursor="pointer"
 
     budget.style.width="50%"
     budget.style.height="100%"
@@ -119,9 +152,12 @@ function addElementmainSection(div,div1){
     div.appendChild(aboutme)
     div1.appendChild(budget)
     div1.appendChild(contact)
-
+    
     addnameSection(services,aboutme,budget,contact);
+
 }
+
+
 
 function addnameSection(services,aboutme,budget,contact){
 
@@ -135,40 +171,44 @@ function addnameSection(services,aboutme,budget,contact){
     nameServices.style.margin="auto"
     nameServices.style.color="#ffffff"
     nameServices.style.fontSize="14px"
-    //nameServices.style.border="1px solid red"
     nameServices.style.textAlign="center"
+    nameServices.classList.add('inter');
+  
+    nameServices.addEventListener("click",()=>{
+        nameServices.style.color="#000000"
+    })
 
     nameBudget.style.width="80px"
     nameBudget.style.height="20px"
     nameBudget.style.margin="auto"
     nameBudget.style.color="#000000"
     nameBudget.style.fontSize="14px"
-//nameBudget.style.border="1px solid red"
     nameBudget.style.textAlign="center"
+    nameBudget.classList.add('inter');
+    
 
     nameAboutMe.style.width="80px"
     nameAboutMe.style.height="20px"
     nameAboutMe.style.margin="auto"
     nameAboutMe.style.color="#ffffff"
     nameAboutMe.style.fontSize="14px"
-   // nameAboutMe.style.border="1px solid red"
     nameAboutMe.style.textAlign="center"
+    nameAboutMe.classList.add('inter');
 
     nameContact.style.width="80px"
     nameContact.style.height="20px"
     nameContact.style.margin="auto"
     nameContact.style.color="#ffffff"
     nameContact.style.fontSize="14px"
-   // nameContact.style.border="1px solid red"
     nameContact.style.textAlign="center"
-
+    nameContact.classList.add('inter');
+    nameContact.classList.add('inter');
 
     nameServices.innerText="Servicios"
     nameBudget.innerText="Presupuesto"
     nameAboutMe.innerText="Sobre Mi"
     nameContact.innerText="Contacto"
     
-
     services.appendChild(nameServices)
     aboutme.appendChild(nameAboutMe)
     budget.appendChild(nameBudget)
@@ -176,6 +216,4 @@ function addnameSection(services,aboutme,budget,contact){
 
 
 
- 
 }
-
