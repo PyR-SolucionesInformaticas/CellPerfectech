@@ -98,7 +98,10 @@ function addNavbar(nav){
 
     list.style.width="40%"
     list.style.height="100%"
-    list.style.backgroundColor="yellow"
+    list.style.display="flex"
+    list.style.justifyContent="center"
+    list.style.alignItems="center"
+    
     
 
     socialnetwork.style.width="30%"
@@ -111,19 +114,84 @@ function addNavbar(nav){
     nav.appendChild(socialnetwork)
 
     addImgTitle(navbar) 
+    addListOption(list)
 }
+
+
+/************Imagen de Navbar*************/
 function addImgTitle(navbar){
 
     var image = document.createElement("img");
 
     image.src = "./image/Nombre.png";
-    image.width =300;
-    image.height =65;
+    image.width =250;
+    image.height =55;
     navbar.appendChild(image);
+}
+/******************************************/
+
+
+
+/*****************Lista Desordenada NAvbar*************************/
+function addListOption(list){
+
+    var ul = document.createElement("ul");
+    var li = document.createElement("li");
+    var li1 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li3 = document.createElement("li");
+
+    ul.style.width="100%"
+    ul.style.height="100%"
+    ul.style.backgroundColor="red"
+    ul.style.display="flex"
+    ul.style.justifyContent="center"
+    ul.style.alignItems="center"
+
+
+
+
+    li.style.width="10%"
+    li.style.height="10%"
+    li.style.backgroundColor="blue"
+
+
+    li1.style.width="10%"
+    li1.style.height="10%"
+    li1.style.backgroundColor="blue"
+
+    li2.style.width="10%"
+    li2.style.height="10%"
+    li2.style.backgroundColor="blue"
+
+    li3.style.width="10%"
+    li3.style.height="10%"
+    li3.style.backgroundColor="blue"
+
+
+
+
+
+
+
+
+
+    list.appendChild(ul);
+    ul.appendChild(li);
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    
+    
+    
+
+
+
+
+
+
 
 }
-
-
 
 
 
