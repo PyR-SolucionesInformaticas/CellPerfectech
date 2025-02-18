@@ -147,26 +147,33 @@ function addListOption(list){
     ul.style.display="flex"
     ul.style.justifyContent="center"
     ul.style.alignItems="center"
+    ul.style.listStyle="none"
+     ul.style.margin="0"
+   
 
 
 
 
-    li.style.width="10%"
-    li.style.height="10%"
+    li.style.width="15%"
+    li.style.height="30%"
     li.style.backgroundColor="blue"
+    li.style.margin="0%"
 
 
-    li1.style.width="10%"
-    li1.style.height="10%"
+    li1.style.width="15%"
+    li1.style.height="30%"
     li1.style.backgroundColor="blue"
+    li1.style.margin="1%"
 
-    li2.style.width="10%"
-    li2.style.height="10%"
+    li2.style.width="15%"
+    li2.style.height="30%"
     li2.style.backgroundColor="blue"
+    li2.style.margin="1%"
 
-    li3.style.width="10%"
-    li3.style.height="10%"
+    li3.style.width="15%"
+    li3.style.height="30%"
     li3.style.backgroundColor="blue"
+    li3.style.margin="1%"
 
 
 
