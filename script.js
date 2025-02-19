@@ -30,22 +30,6 @@ document.body.onload=addElement;
 // })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function addElement(){
 
 var nav=document.createElement("nav")
@@ -106,7 +90,7 @@ function addNavbar(nav){
 
     socialnetwork.style.width="30%"
     socialnetwork.style.height="100%"
-    socialnetwork.style.backgroundColor="blue"
+  
   
 
     nav.appendChild(navbar)
@@ -143,44 +127,59 @@ function addListOption(list){
 
     ul.style.width="100%"
     ul.style.height="100%"
-    ul.style.backgroundColor="red"
     ul.style.display="flex"
     ul.style.justifyContent="center"
     ul.style.alignItems="center"
     ul.style.listStyle="none"
-     ul.style.margin="0"
+    ul.style.fontSize="20px"
+    ul.style.padding="0"
+    ul.style.color="#000000"
+   
+
    
 
 
+    li.style.width="28%"
+    li.style.height="60%"
+    li.style.display="flex"
+    li.style.justifyContent="center"
+    li.style.alignItems="center"
+    li.style.border="1px solid black"
+    li.style.margin="1%"
+    li.classList.add('inria-sans-regular');
 
-
-    li.style.width="15%"
-    li.style.height="30%"
-    li.style.backgroundColor="blue"
-    li.style.margin="0%"
-
-
-    li1.style.width="15%"
-    li1.style.height="30%"
-    li1.style.backgroundColor="blue"
+    li1.style.width="28%"
+    li1.style.height="60%"
+    li1.style.display="flex"
+    li1.style.justifyContent="center"
+    li1.style.alignItems="center"
+    li1.style.border="1px solid black"
     li1.style.margin="1%"
+    li1.classList.add('inria-sans-regular');
+    
 
-    li2.style.width="15%"
-    li2.style.height="30%"
-    li2.style.backgroundColor="blue"
+    li2.style.width="28%"
+    li2.style.height="60%"
+    li2.style.display="flex"
+    li2.style.justifyContent="center"
+    li2.style.alignItems="center"
+    li2.style.border="1px solid black"
     li2.style.margin="1%"
+    li2.classList.add('inria-sans-regular');
 
-    li3.style.width="15%"
-    li3.style.height="30%"
-    li3.style.backgroundColor="blue"
+    li3.style.width="28%"
+    li3.style.height="60%"
+    li3.style.display="flex"
+    li3.style.justifyContent="center"
+    li3.style.alignItems="center"
+    li3.style.border="1px solid black"
     li3.style.margin="1%"
+    li3.classList.add('inria-sans-regular');
 
-
-
-
-
-
-
+    li.innerText="Services"
+    li1.innerText="Sobre Mi"
+    li2.innerText="Presupuesto"
+    li3.innerText="Contacto"
 
 
     list.appendChild(ul);
@@ -188,15 +187,6 @@ function addListOption(list){
     ul.appendChild(li1);
     ul.appendChild(li2);
     ul.appendChild(li3);
-    
-    
-    
-
-
-
-
-
-
 
 }
 
@@ -207,8 +197,12 @@ function addTermsAndConditions(footer){
 
     termCond.style.maxWidth="500px"
     termCond.style.height="20px"
+    termCond.style.display="flex"
+    termCond.style.justifyContent="center"
+    termCond.style.alignItems="center"
     termCond.style.color="#000000"
     termCond.style.fontSize="14px"
+    termCond.style.marginTop="1%"
     termCond.classList.add('inter');
     termCond.innerText="© copyright  P&R soluciones Informaticas | All rights reserved"
     footer.appendChild(termCond)
@@ -312,9 +306,9 @@ function addnameSection(services,aboutme,budget,contact){
     nameServices.style.textAlign="center"
     nameServices.classList.add('inter');
   
-    nameServices.addEventListener("click",()=>{
+    /*nameServices.addEventListener("click",()=>{
         nameServices.style.color="#000000"
-    })
+    })*/
 
     nameBudget.style.width="80px"
     nameBudget.style.height="20px"
