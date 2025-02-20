@@ -31,7 +31,7 @@ document.body.onload=addElement;
 
 
 function addElement(){
-
+/********************Create main elements ******************************/
 var nav=document.createElement("nav")
 var main=document.createElement("main")
 var footer=document.createElement("footer")
@@ -63,13 +63,11 @@ document.body.appendChild(nav)
 document.body.appendChild(main)
 document.body.appendChild(footer)
 
-/********************************************************* */
-addNavbar(nav)
-addElementmain(main)
-addTermsAndConditions(footer)
-}
+/**********************************************************/
 
-function addNavbar(nav){
+
+/********************Create section of navbar ******************************/
+
     var navbar = document.createElement("div");
     var list = document.createElement("div");
     var socialnetwork = document.createElement("div");
@@ -86,24 +84,26 @@ function addNavbar(nav){
     list.style.justifyContent="center"
     list.style.alignItems="center"
     
-    
 
     socialnetwork.style.width="30%"
     socialnetwork.style.height="100%"
   
-  
-
     nav.appendChild(navbar)
     nav.appendChild(list)
     nav.appendChild(socialnetwork)
 
-    addImgTitle(navbar) 
-    addListOption(list)
-}
 
 
-/************Imagen de Navbar*************/
-function addImgTitle(navbar){
+
+
+
+
+
+
+
+
+
+/********************image main name ******************************/
 
     var image = document.createElement("img");
 
@@ -111,13 +111,8 @@ function addImgTitle(navbar){
     image.width =250;
     image.height =55;
     navbar.appendChild(image);
-}
-/******************************************/
 
-
-
-/*****************Lista Desordenada NAvbar*************************/
-function addListOption(list){
+/********************list option  links ******************************/
 
     var ul = document.createElement("ul");
     var li = document.createElement("li");
@@ -135,10 +130,6 @@ function addListOption(list){
     ul.style.padding="0"
     ul.style.color="#000000"
    
-
-   
-
-
     li.style.width="28%"
     li.style.height="60%"
     li.style.display="flex"
@@ -157,7 +148,6 @@ function addListOption(list){
     li1.style.margin="1%"
     li1.classList.add('inria-sans-regular');
     
-
     li2.style.width="28%"
     li2.style.height="60%"
     li2.style.display="flex"
@@ -188,11 +178,8 @@ function addListOption(list){
     ul.appendChild(li2);
     ul.appendChild(li3);
 
-}
 
-
-
-function addTermsAndConditions(footer){
+/********************Create footer ******************************/
     var termCond = document.createElement("h2");
 
     termCond.style.maxWidth="500px"
@@ -206,12 +193,9 @@ function addTermsAndConditions(footer){
     termCond.classList.add('inter');
     termCond.innerText="© copyright  P&R soluciones Informaticas | All rights reserved"
     footer.appendChild(termCond)
-  
-}
-    
 
+/********************Create main ******************************/
 
-function addElementmain(main){
     var div=document.createElement("div")
     var div1=document.createElement("div")
     var div2=document.createElement("div")
@@ -221,13 +205,10 @@ function addElementmain(main){
     div.style.backgroundColor="white"
     div.style.display="flex"
   
-
-
     div1.style.width="100%"
     div1.style.height="50%"
     div1.style.backgroundColor="red"
     div1.style.display="flex"
-
 
     div2.style.width="100%"
     div2.style.height="100%"
@@ -238,16 +219,13 @@ function addElementmain(main){
     div2.style.backgroundRepeat="no-repeat"
     div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
 
-    
-
     main.appendChild(div)
     main.appendChild(div1)
     main.appendChild(div2)
 
 
-    addElementmainSection(div,div1)
-}
-function addElementmainSection(div,div1){
+
+/********************Create section main ******************************/
 
     var services=document.createElement("div")
     var aboutme=document.createElement("div")
@@ -286,33 +264,7 @@ function addElementmainSection(div,div1){
     div1.appendChild(budget)
     div1.appendChild(contact)
     
-    addnameSection(services,aboutme,budget,contact);
-
-
-    services.addEventListener("mouseover",()=>{
-       
-        services.style.width="500px"
-        services.style.height="00px"
-        services.style.borderRadius="50%"
-        services.style.transition="all 1s ease-in-out"
-
-    
-        
-     
-    })
-    services.addEventListener("mouseout",()=>{
-        services.style.display="flex"
-        services.style.width="50%"
-        image.style.transition="all 1s ease-in-out"
-     })
-
-
-}
-
-
-
-function addnameSection(services,aboutme,budget,contact){
-
+/********************Create section name main ******************************/
     var nameServices = document.createElement("h2");
     var nameAboutMe = document.createElement("h2");
     var nameBudget = document.createElement("h2");
@@ -368,4 +320,41 @@ function addnameSection(services,aboutme,budget,contact){
 
 
 
+
+
+
+    services.addEventListener("mouseover",()=>{
+        image.style.background="yellow"
+        image.style.transition="all 1s ease-in-out"
+    })
+    services.addEventListener("mouseout",()=>{
+        image.style.background="none"
+        image.style.transition="all 1s ease-in-out"
+     })
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
