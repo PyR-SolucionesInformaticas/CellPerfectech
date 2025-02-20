@@ -46,7 +46,6 @@ nav.style.backgroundColor="#ffffff"
 
 main.style.width="100%"
 main.style.height="83%"
-main.style.backgroundColor="green"
 main.style.display="flex"
 main.style.justifyContent="center"
 main.style.flexDirection="column"
@@ -218,14 +217,12 @@ function addElementmain(main){
   
     div.style.width="100%"
     div.style.height="50%"
-    div.style.backgroundColor="white"
     div.style.display="flex"
   
 
 
     div1.style.width="100%"
     div1.style.height="50%"
-    div1.style.backgroundColor="red"
     div1.style.display="flex"
 
 
@@ -237,8 +234,12 @@ function addElementmain(main){
     div2.style.opacity="0.4"
     div2.style.backgroundRepeat="no-repeat"
     div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
+   // div2.style.zIndex="150"
 
-    
+    // div2.addEventListener("mouseover",()=>{
+    //     div2.style.zIndex="140"
+    //     nameContact.style.transition="all 1s ease-in-out"
+    // })
 
     main.appendChild(div)
     main.appendChild(div1)
@@ -256,30 +257,29 @@ function addElementmainSection(div,div1){
   
     services.style.width="50%"
     services.style.height="100%"
-    services.style.backgroundColor="#400335"
     services.style.justifyContent="center"
     services.style.alignContent="center"
     services.style.zIndex="150"
-    //services.style.cursor="pointer"
+  
 
     aboutme.style.width="50%"
     aboutme.style.height="100%"
-    aboutme.style.backgroundColor="#000000"
     aboutme.style.justifyContent="center"
     aboutme.style.alignContent="center"
-    //aboutme.style.cursor="pointer"
+    aboutme.style.zIndex="150"
+   
 
     budget.style.width="50%"
     budget.style.height="100%"
-    budget.style.backgroundColor="#ffffff"
     budget.style.justifyContent="center"
     budget.style.alignContent="center"
+    budget.style.zIndex="150"
 
     contact.style.width="50%"
     contact.style.height="100%"
-    contact.style.backgroundColor="#107C1D"
     contact.style.justifyContent="center"
     contact.style.alignContent="center"
+    contact.style.zIndex="150"
     
     div.appendChild(services)
     div.appendChild(aboutme)
@@ -289,22 +289,7 @@ function addElementmainSection(div,div1){
     addnameSection(services,aboutme,budget,contact);
 
 
-    services.addEventListener("mouseover",()=>{
-       
-        services.style.width="500px"
-        services.style.height="00px"
-        services.style.borderRadius="50%"
-        services.style.transition="all 1s ease-in-out"
-
-    
-        
-     
-    })
-    services.addEventListener("mouseout",()=>{
-        services.style.display="flex"
-        services.style.width="50%"
-        image.style.transition="all 1s ease-in-out"
-     })
+  
 
 
 }
@@ -317,39 +302,62 @@ function addnameSection(services,aboutme,budget,contact){
     var nameAboutMe = document.createElement("h2");
     var nameBudget = document.createElement("h2");
     var nameContact = document.createElement("h2");
+
+    const sizeNamesServices=getComputedStyle(nameServices)
+    const sizeNamesAboutMe=getComputedStyle(nameAboutMe)
+    const sizeNamesBudget=getComputedStyle(nameBudget)
+    const sizeNamesContact=getComputedStyle(nameContact)
+   
     
-    nameServices.style.width="80px"
-    nameServices.style.height="20px"
-    nameServices.style.margin="auto"
+    nameServices.style.width="100%"
+    nameServices.style.height="100%"
+    nameServices.style.display="flex"
+    nameServices.style.justifyContent="center"
+    nameServices.style.alignItems="center"
     nameServices.style.color="#ffffff"
     nameServices.style.fontSize="14px"
     nameServices.style.textAlign="center"
     nameServices.classList.add('inter');
-  
+    nameServices.style.margin="0%"
+    nameServices.style.backgroundColor="#400335"
     /*nameServices.addEventListener("click",()=>{
         nameServices.style.color="#000000"
     })*/
 
-    nameBudget.style.width="80px"
-    nameBudget.style.height="20px"
-    nameBudget.style.margin="auto"
+    nameBudget.style.width="100%"
+    nameBudget.style.height="100%"
+    nameBudget.style.display="flex"
+    nameBudget.style.justifyContent="center"
+    nameBudget.style.alignItems="center"
+    nameBudget.style.margin="0%"
     nameBudget.style.color="#000000"
+    nameBudget.style.backgroundColor="#ffffff"
     nameBudget.style.fontSize="14px"
     nameBudget.style.textAlign="center"
     nameBudget.classList.add('inter');
     
 
-    nameAboutMe.style.width="80px"
-    nameAboutMe.style.height="20px"
-    nameAboutMe.style.margin="auto"
+    nameAboutMe.style.width="100%"
+    nameAboutMe.style.height="100%"
+    nameAboutMe.style.display="flex"
+   
+    nameAboutMe.style.justifyContent="center"
+    nameAboutMe.style.alignItems="center"
+    nameAboutMe.style.margin="0%"
     nameAboutMe.style.color="#ffffff"
+    nameAboutMe.style.backgroundColor="#000000"
     nameAboutMe.style.fontSize="14px"
     nameAboutMe.style.textAlign="center"
     nameAboutMe.classList.add('inter');
 
-    nameContact.style.width="80px"
-    nameContact.style.height="20px"
-    nameContact.style.margin="auto"
+
+    nameContact.style.width="100%"
+    nameContact.style.height="100%"
+    nameContact.style.display="flex"
+    nameContact.style.justifyContent="center"
+    nameContact.style.alignItems="center"
+    nameContact.style.margin="0%"
+    nameContact.style.backgroundColor="#107C1D"
     nameContact.style.color="#ffffff"
     nameContact.style.fontSize="14px"
     nameContact.style.textAlign="center"
@@ -365,6 +373,119 @@ function addnameSection(services,aboutme,budget,contact){
     aboutme.appendChild(nameAboutMe)
     budget.appendChild(nameBudget)
     contact.appendChild(nameContact)
+
+
+
+
+  
+
+
+    nameServices.addEventListener("mouseover",()=>{
+       
+        nameServices.style.width="20%"
+        nameServices.style.cursor="pointer"
+        nameServices.style.transition="all 1s ease-in-out"
+
+
+        if(sizeNamesServices.width=="20%"){
+
+           
+          
+        }
+      
+        else if(sizeNamesServices.width=="20%"){
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+        }else{
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+        }
+
+
+
+
+      
+    })
+    
+    nameAboutMe.addEventListener("mouseover",()=>{
+       
+        nameAboutMe.style.width="20%"
+        nameAboutMe.style.cursor="pointer"
+        nameAboutMe.style.transition="all 1s ease-in-out"
+
+
+
+        if(sizeNamesServices.width=="20%"){
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+            
+        }
+        else if(sizeNamesAboutMe.width=="20%"){
+            nameServices.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+        }
+        else if(sizeNamesServices.width=="20%"){
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+        }else{
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+        }
+
+
+
+
+    })
+
+
+    nameBudget.addEventListener("mouseover",()=>{
+       
+        nameBudget.style.width="20%"
+        nameBudget.style.cursor="pointer"
+        nameBudget.style.transition="all 1s ease-in-out"
+
+
+
+
+
+
+
+
+
+
+
+    })
+    nameContact.addEventListener("mouseover",()=>{
+       
+        nameContact.style.width="20%"
+        nameContact.style.cursor="pointer"
+        nameContact.style.transition="all 1s ease-in-out"
+
+    })
+
+
+
+
+
+    // nameServices.addEventListener("mouseout",()=>{
+    //     nameServices.style.width="100%"
+    //     nameServices.style.transition="all 1s ease-in-out"
+    //  })
+
+
+
+
 
 
 
