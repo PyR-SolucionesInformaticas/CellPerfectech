@@ -49,6 +49,10 @@ main.style.height="83%"
 main.style.display="flex"
 main.style.justifyContent="center"
 main.style.flexDirection="column"
+//main.style.transition="all 0.5s ease-in-out"
+
+    
+
 
 
 footer.style.width="100%"
@@ -105,11 +109,20 @@ function addNavbar(nav){
 function addImgTitle(navbar){
 
     var image = document.createElement("img");
+    var a = document.createElement("a");
 
     image.src = "./image/Nombre.png";
-    image.width =250;
-    image.height =55;
-    navbar.appendChild(image);
+    image.width =230;
+    image.height =45;
+    image.style.cursor="pointer";
+
+
+    a.style.cursor="pointer";
+    a.style.zIndex="150";
+    a.appendChild(image);
+    navbar.appendChild(a);
+
+    a.href="./index.html"
 }
 /******************************************/
 
@@ -143,7 +156,6 @@ function addListOption(list){
     li.style.display="flex"
     li.style.justifyContent="center"
     li.style.alignItems="center"
-    li.style.border="1px solid black"
     li.style.margin="1%"
     li.classList.add('inria-sans-regular');
 
@@ -152,7 +164,6 @@ function addListOption(list){
     li1.style.display="flex"
     li1.style.justifyContent="center"
     li1.style.alignItems="center"
-    li1.style.border="1px solid black"
     li1.style.margin="1%"
     li1.classList.add('inria-sans-regular');
     
@@ -162,7 +173,6 @@ function addListOption(list){
     li2.style.display="flex"
     li2.style.justifyContent="center"
     li2.style.alignItems="center"
-    li2.style.border="1px solid black"
     li2.style.margin="1%"
     li2.classList.add('inria-sans-regular');
 
@@ -171,7 +181,6 @@ function addListOption(list){
     li3.style.display="flex"
     li3.style.justifyContent="center"
     li3.style.alignItems="center"
-    li3.style.border="1px solid black"
     li3.style.margin="1%"
     li3.classList.add('inria-sans-regular');
 
@@ -214,10 +223,15 @@ function addElementmain(main){
     var div=document.createElement("div")
     var div1=document.createElement("div")
     var div2=document.createElement("div")
+    var div3=document.createElement("div")
+    var div4=document.createElement("div")
+    var div5=document.createElement("div")
+    var div6=document.createElement("div")
   
     div.style.width="100%"
     div.style.height="50%"
     div.style.display="flex"
+    
   
 
 
@@ -236,19 +250,68 @@ function addElementmain(main){
     div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
    // div2.style.zIndex="150"
 
-    // div2.addEventListener("mouseover",()=>{
-    //     div2.style.zIndex="140"
-    //     nameContact.style.transition="all 1s ease-in-out"
-    // })
+//     // div2.addEventListener("mouseover",()=>{
+//     //     div2.style.zIndex="140"
+//     //     nameContact.style.transition="all 1s ease-in-out"
+//     // })
+
+    div3.style.width="100%"
+    div3.style.height="83%"
+    div3.style.display="flex"
+    div3.style.justifyContent="center"
+    div3.style.alignItems="center"
+    div3.style.position="fixed"
+    div3.style.backgroundColor="red"
+    div3.style.opacity="0"
+   
+    
+    
+    
+
+    div4.style.width="100%"
+    div4.style.height="83%"
+    div4.style.display="flex"
+    div4.style.justifyContent="center"
+    div4.style.alignItems="center"
+    div4.style.position="fixed"
+    div4.style.backgroundColor="blue"
+    div4.style.opacity="0"
+    
+    div5.style.width="100%"
+    div5.style.height="83%"
+    div5.style.display="flex"
+    div5.style.justifyContent="center"
+    div5.style.alignItems="center"
+    div5.style.position="fixed"
+    div5.style.backgroundColor="yellow"
+    div5.style.opacity="0"
+    
+    div6.style.width="100%"
+    div6.style.height="83%"
+    div6.style.display="flex"
+    div6.style.justifyContent="center"
+    div6.style.alignItems="center"
+    div6.style.position="fixed"
+    div6.style.backgroundColor="pink"
+    div6.style.opacity="0"
+  
+
+  
 
     main.appendChild(div)
     main.appendChild(div1)
     main.appendChild(div2)
+    main.appendChild(div3)
+    main.appendChild(div4)
+    main.appendChild(div5)
+    main.appendChild(div6)
+    
 
 
-    addElementmainSection(div,div1)
+
+    addElementmainSection(div,div1,div3,div4,div5,div6)
 }
-function addElementmainSection(div,div1){
+function addElementmainSection(div,div1,div3,div4,div5,div6){
 
     var services=document.createElement("div")
     var aboutme=document.createElement("div")
@@ -286,7 +349,7 @@ function addElementmainSection(div,div1){
     div1.appendChild(budget)
     div1.appendChild(contact)
     
-    addnameSection(services,aboutme,budget,contact);
+    addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6);
 
 
   
@@ -296,7 +359,7 @@ function addElementmainSection(div,div1){
 
 
 
-function addnameSection(services,aboutme,budget,contact){
+function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
 
     var nameServices = document.createElement("h2");
     var nameAboutMe = document.createElement("h2");
@@ -386,66 +449,47 @@ function addnameSection(services,aboutme,budget,contact){
         nameServices.style.cursor="pointer"
         nameServices.style.transition="all 1s ease-in-out"
 
+        nameAboutMe.style.width="100%"
+        nameBudget.style.width="100%"
+        nameContact.style.width="100%"
 
-        if(sizeNamesServices.width=="20%"){
-
-           
-          
-        }
       
-        else if(sizeNamesServices.width=="20%"){
-            nameAboutMe.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
-    
-        }else{
-            nameAboutMe.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
-    
-        }
-
-
-
-
+        div3.style.width="100%"
+        div3.style.height="83%"
+        div3.style.display="flex"
+        div3.style.opacity="1"
+        div3.style.transition="all 1s ease-in-out"
+        div4.style.opacity="0"
+        div5.style.opacity="0"
+        div6.style.opacity="0"
+        
       
     })
+
+
+
+
     
     nameAboutMe.addEventListener("mouseover",()=>{
        
         nameAboutMe.style.width="20%"
         nameAboutMe.style.cursor="pointer"
         nameAboutMe.style.transition="all 1s ease-in-out"
-
-
-
-        if(sizeNamesServices.width=="20%"){
-            nameAboutMe.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
-            
-        }
-        else if(sizeNamesAboutMe.width=="20%"){
-            nameServices.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
     
-        }
-        else if(sizeNamesServices.width=="20%"){
-            nameAboutMe.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
-    
-        }else{
-            nameAboutMe.style.width="100%"
-            nameBudget.style.width="100%"
-            nameContact.style.width="100%"
-    
-        }
+        nameServices.style.width="100%"
+        nameBudget.style.width="100%"
+        nameContact.style.width="100%"
 
-
-
-
+  
+        div4.style.width="100%"
+        div4.style.height="83%"
+        div4.style.display="flex"
+        div4.style.transition="all 1s ease-in-out"
+        div4.style.opacity="1"
+        div3.style.opacity="0"
+        div5.style.opacity="0"
+        div6.style.opacity="0"
+      
     })
 
 
@@ -455,33 +499,101 @@ function addnameSection(services,aboutme,budget,contact){
         nameBudget.style.cursor="pointer"
         nameBudget.style.transition="all 1s ease-in-out"
 
+        nameAboutMe.style.width="100%"
+        nameContact.style.width="100%"
+        nameServices.style.width="100%"
 
+        div5.style.width="100%"
+        div5.style.height="83%"
+        div5.style.display="flex"
+        div5.style.transition="all 1s ease-in-out"
+        div5.style.opacity="1"
 
-
-
-
-
-
-
+        div4.style.opacity="0"
+        div3.style.opacity="0"
+        div6.style.opacity="0"
 
 
     })
+
+
+  
+
+
+
+
+
     nameContact.addEventListener("mouseover",()=>{
        
         nameContact.style.width="20%"
         nameContact.style.cursor="pointer"
         nameContact.style.transition="all 1s ease-in-out"
 
+        nameAboutMe.style.width="100%"
+        nameBudget.style.width="100%"
+        nameServices.style.width="100%"
+
+
+        div6.style.width="100%"
+        div6.style.height="83%"
+        div6.style.display="flex"
+        div6.style.transition="all 1s ease-in-out"
+        div6.style.opacity="1"
+
+        div4.style.opacity="0"
+        div3.style.opacity="0"
+        div5.style.opacity="0"
     })
 
+ /************************************************** */
+    nameServices.addEventListener("click",()=>{
 
+        nameServices.style.width="100%"
+       
 
+    })
+    nameContact.addEventListener("click",()=>{
 
+        nameContact.style.width="100%"
 
-    // nameServices.addEventListener("mouseout",()=>{
-    //     nameServices.style.width="100%"
-    //     nameServices.style.transition="all 1s ease-in-out"
-    //  })
+    })
+
+    nameBudget.addEventListener("click",()=>{
+
+        nameBudget.style.width="100%"
+
+    })
+
+    nameAboutMe.addEventListener("click",()=>{
+
+        nameAboutMe.style.width="100%"
+       
+
+    })
+    /************************************************** */
+
+    nameServices.addEventListener("click",()=>{
+
+   
+        nameServices.style.width="0%"
+        nameAboutMe.style.width="0%"
+        nameBudget.style.width="0%"
+        nameContact.style.width="0%"
+
+        nameServices.style.opacity="0"
+        nameAboutMe.style.opacity="0"
+        nameBudget.style.opacity="0"
+        nameContact.style.opacity="0"
+          
+
+        nameAboutMe.style.transition="all 1s ease-in-out"
+        nameServices.style.transition="all 1s ease-in-out"
+        nameBudget.style.transition="all 1s ease-in-out"
+        nameContact.style.transition="all 1s ease-in-out"
+     
+    })
+
+        
 
 
 
