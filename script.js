@@ -227,13 +227,18 @@ function addElementmain(main){
     var div4=document.createElement("div")
     var div5=document.createElement("div")
     var div6=document.createElement("div")
+
+    var div4Container=document.createElement("div")
+    var div4ContainerTi=document.createElement("div")
+    var div4ContainerP=document.createElement("div")
+    var div4ContainerPhoto=document.createElement("div")
+
   
     div.style.width="100%"
     div.style.height="50%"
     div.style.display="flex"
     
   
-
 
     div1.style.width="100%"
     div1.style.height="50%"
@@ -248,12 +253,7 @@ function addElementmain(main){
     div2.style.opacity="0.4"
     div2.style.backgroundRepeat="no-repeat"
     div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
-   // div2.style.zIndex="150"
 
-//     // div2.addEventListener("mouseover",()=>{
-//     //     div2.style.zIndex="140"
-//     //     nameContact.style.transition="all 1s ease-in-out"
-//     // })
 
     div3.style.width="100%"
     div3.style.height="83%"
@@ -261,7 +261,7 @@ function addElementmain(main){
     div3.style.justifyContent="center"
     div3.style.alignItems="center"
     div3.style.position="fixed"
-    div3.style.backgroundColor="red"
+    div3.style.backgroundColor="#400335"
     div3.style.opacity="0"
    
     
@@ -274,7 +274,7 @@ function addElementmain(main){
     div4.style.justifyContent="center"
     div4.style.alignItems="center"
     div4.style.position="fixed"
-    div4.style.backgroundColor="blue"
+    div4.style.backgroundColor="#000000"
     div4.style.opacity="0"
     
     div5.style.width="100%"
@@ -283,7 +283,7 @@ function addElementmain(main){
     div5.style.justifyContent="center"
     div5.style.alignItems="center"
     div5.style.position="fixed"
-    div5.style.backgroundColor="yellow"
+    div5.style.backgroundColor="#ffffff"
     div5.style.opacity="0"
     
     div6.style.width="100%"
@@ -292,10 +292,56 @@ function addElementmain(main){
     div6.style.justifyContent="center"
     div6.style.alignItems="center"
     div6.style.position="fixed"
-    div6.style.backgroundColor="pink"
+    div6.style.backgroundColor="#107C1D" 
     div6.style.opacity="0"
   
 
+
+    div4Container.style.width="65%"
+    div4Container.style.height="100%"
+    div4Container.style.display="flex"
+    div4Container.style.justifyContent="center"
+    div4Container.style.alignItems="center"
+    div4Container.style.flexDirection="column"
+    div4Container.style.backgroundColor="#ffffff"
+
+    div4ContainerTi.style.width="100%"
+    div4ContainerTi.style.height="30%"
+    div4ContainerTi.style.display="flex"
+    div4ContainerTi.style.justifyContent="center"
+    div4ContainerTi.style.alignItems="center"
+    div4ContainerTi.style.backgroundColor="pink"
+
+    div4ContainerP.style.width="100%"
+    div4ContainerP.style.height="70%"
+    div4ContainerP.style.display="flex"
+    div4ContainerP.style.justifyContent="center"
+    div4ContainerP.style.alignItems="center"
+    div4ContainerP.style.backgroundColor="blue"
+
+
+    div4ContainerPhoto.style.width="35%"
+    div4ContainerPhoto.style.height="100%"
+    div4ContainerPhoto.style.display="flex"
+    div4ContainerPhoto.style.justifyContent="center"
+    div4ContainerPhoto.style.alignItems="center"
+    div4ContainerPhoto.style.backgroundColor="orange"
+
+    
+
+    div4ContainerTi.innerText="Hola Soy Joaquín Solís  🧑‍💻"
+    div4ContainerP.innerText="Soy técnico especializado en dispositivos móviles, consolas, PCs y notebooks, con una gran pasión por la tecnología. Me dedico a la reparación, optimización y mantenimiento de estos equipos, siempre en busca de las mejores soluciones para cada usuarioCon el objetivo de brindar el mejor servicio a mis clientes, fundé CellPerfecTech, un espacio dedicado a la reparación y optimización de dispositivos con un enfoque en la calidad y la satisfacción del cliente.Además de mi interés por la innovación tecnológica, el ciclismo es otra de mis grandes pasiones. Disfruto explorando nuevos caminos y desafiando mis límites, tanto en la ruta como en la vida profesional.Siempre estoy en constante aprendizaje para ofrecer un servicio de calidad y estar al día con las últimas tendencias tecnológicas. ¡Listo para ayudarte con cualquier problema en tu dispositivo! 🚀🔗  Visita CellPerfecTech en instagram y Sigueme Insecto"
+
+
+
+
+
+    div4Container.appendChild(div4ContainerTi)
+    div4Container.appendChild(div4ContainerP)
+
+
+    div4.appendChild(div4Container)
+    div4.appendChild(div4ContainerPhoto)
   
 
     main.appendChild(div)
@@ -305,7 +351,18 @@ function addElementmain(main){
     main.appendChild(div4)
     main.appendChild(div5)
     main.appendChild(div6)
-    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -383,9 +440,7 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
     nameServices.classList.add('inter');
     nameServices.style.margin="0%"
     nameServices.style.backgroundColor="#400335"
-    /*nameServices.addEventListener("click",()=>{
-        nameServices.style.color="#000000"
-    })*/
+   
 
     nameBudget.style.width="100%"
     nameBudget.style.height="100%"
@@ -440,60 +495,87 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
 
 
 
-  
+    /*****************crear una funcion dentro de la escucha************************/
 
 
     nameServices.addEventListener("mouseover",()=>{
+
+
+        if(nameServices.style.visibility=="hidden"||nameAboutMe.style.visibility=="hidden"||nameBudget.style.visibility=="hidden"||nameContact.style.visibility=="hidden"){
+            console.log("hola entre");
+        } else{
+
+            nameServices.style.width="20%"
+            nameServices.style.cursor="pointer"
+            nameServices.style.transition="all 1s ease-in-out"
+    
+            nameAboutMe.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+          
+            div3.style.width="100%"
+            div3.style.height="83%"
+            div3.style.display="flex"
+            div3.style.opacity="1"
+            div3.style.transition="all 1s ease-in-out"
+            div4.style.opacity="0"
+            div5.style.opacity="0"
+            div6.style.opacity="0"
+
+        }
        
-        nameServices.style.width="20%"
-        nameServices.style.cursor="pointer"
-        nameServices.style.transition="all 1s ease-in-out"
-
-        nameAboutMe.style.width="100%"
-        nameBudget.style.width="100%"
-        nameContact.style.width="100%"
-
-      
-        div3.style.width="100%"
-        div3.style.height="83%"
-        div3.style.display="flex"
-        div3.style.opacity="1"
-        div3.style.transition="all 1s ease-in-out"
-        div4.style.opacity="0"
-        div5.style.opacity="0"
-        div6.style.opacity="0"
         
-      
     })
-
 
 
 
     
     nameAboutMe.addEventListener("mouseover",()=>{
-       
-        nameAboutMe.style.width="20%"
-        nameAboutMe.style.cursor="pointer"
-        nameAboutMe.style.transition="all 1s ease-in-out"
-    
-        nameServices.style.width="100%"
-        nameBudget.style.width="100%"
-        nameContact.style.width="100%"
 
-  
-        div4.style.width="100%"
-        div4.style.height="83%"
-        div4.style.display="flex"
-        div4.style.transition="all 1s ease-in-out"
-        div4.style.opacity="1"
-        div3.style.opacity="0"
-        div5.style.opacity="0"
-        div6.style.opacity="0"
+
+
+
+        if(nameServices.style.visibility=="hidden"||nameAboutMe.style.visibility=="hidden"||nameBudget.style.visibility=="hidden"||nameContact.style.visibility=="hidden"){
+            console.log("hola entre");
+        } else{
+
+ 
+            nameAboutMe.style.width="20%"
+            nameAboutMe.style.cursor="pointer"
+            nameAboutMe.style.transition="all 1s ease-in-out"
+        
+            nameServices.style.width="100%"
+            nameBudget.style.width="100%"
+            nameContact.style.width="100%"
+    
+      
+            div4.style.width="100%"
+            div4.style.height="83%"
+            div4.style.display="flex"
+            div4.style.transition="all 1s ease-in-out"
+            div4.style.opacity="1"
+            div3.style.opacity="0"
+            div5.style.opacity="0"
+            div6.style.opacity="0"
+
+
+
+
+
+        }
+      
       
     })
 
 
     nameBudget.addEventListener("mouseover",()=>{
+
+
+
+        if(nameServices.style.visibility=="hidden"||nameAboutMe.style.visibility=="hidden"||nameBudget.style.visibility=="hidden"||nameContact.style.visibility=="hidden"){
+            console.log("hola entre");
+        } else{
        
         nameBudget.style.width="20%"
         nameBudget.style.cursor="pointer"
@@ -512,18 +594,21 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
         div4.style.opacity="0"
         div3.style.opacity="0"
         div6.style.opacity="0"
-
+        }
 
     })
 
 
   
 
-
-
-
-
     nameContact.addEventListener("mouseover",()=>{
+
+
+
+
+        if(nameServices.style.visibility=="hidden"||nameAboutMe.style.visibility=="hidden"||nameBudget.style.visibility=="hidden"||nameContact.style.visibility=="hidden"){
+            console.log("hola entre");
+        } else{
        
         nameContact.style.width="20%"
         nameContact.style.cursor="pointer"
@@ -543,34 +628,87 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
         div4.style.opacity="0"
         div3.style.opacity="0"
         div5.style.opacity="0"
+        }
     })
 
- /************************************************** */
-    nameServices.addEventListener("click",()=>{
-
-        nameServices.style.width="100%"
-       
-
-    })
+ /*********************Crear una funcion***************************** */
+  
     nameContact.addEventListener("click",()=>{
 
-        nameContact.style.width="100%"
+        nameServices.style.width="0%"
+        nameAboutMe.style.width="0%"
+        nameBudget.style.width="0%"
+        nameContact.style.width="0%"
+
+        nameServices.style.fontSize="0"
+        nameAboutMe.style.fontSize="0"
+        nameBudget.style.fontSize="0"
+        nameContact.style.fontSize="0"
+
+        nameServices.style.visibility="hidden"
+        nameAboutMe.style.visibility="hidden"
+        nameBudget.style.visibility="hidden"
+        nameContact.style.visibility="hidden"
+          
+
+        nameAboutMe.style.transition="all 1s ease-in-out"
+        nameServices.style.transition="all 1s ease-in-out"
+        nameBudget.style.transition="all 1s ease-in-out"
+        nameContact.style.transition="all 1s ease-in-out"
 
     })
 
     nameBudget.addEventListener("click",()=>{
 
-        nameBudget.style.width="100%"
+        nameServices.style.width="0%"
+        nameAboutMe.style.width="0%"
+        nameBudget.style.width="0%"
+        nameContact.style.width="0%"
+
+        nameServices.style.fontSize="0"
+        nameAboutMe.style.fontSize="0"
+        nameBudget.style.fontSize="0"
+        nameContact.style.fontSize="0"
+
+        nameServices.style.visibility="hidden"
+        nameAboutMe.style.visibility="hidden"
+        nameBudget.style.visibility="hidden"
+        nameContact.style.visibility="hidden"
+          
+
+        nameAboutMe.style.transition="all 1s ease-in-out"
+        nameServices.style.transition="all 1s ease-in-out"
+        nameBudget.style.transition="all 1s ease-in-out"
+        nameContact.style.transition="all 1s ease-in-out"
 
     })
 
     nameAboutMe.addEventListener("click",()=>{
 
-        nameAboutMe.style.width="100%"
+        nameServices.style.width="0%"
+        nameAboutMe.style.width="0%"
+        nameBudget.style.width="0%"
+        nameContact.style.width="0%"
+
+        nameServices.style.fontSize="0"
+        nameAboutMe.style.fontSize="0"
+        nameBudget.style.fontSize="0"
+        nameContact.style.fontSize="0"
+
+        nameServices.style.visibility="hidden"
+        nameAboutMe.style.visibility="hidden"
+        nameBudget.style.visibility="hidden"
+        nameContact.style.visibility="hidden"
+          
+
+        nameAboutMe.style.transition="all 1s ease-in-out"
+        nameServices.style.transition="all 1s ease-in-out"
+        nameBudget.style.transition="all 1s ease-in-out"
+        nameContact.style.transition="all 1s ease-in-out"
        
 
     })
-    /************************************************** */
+  
 
     nameServices.addEventListener("click",()=>{
 
@@ -580,10 +718,15 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
         nameBudget.style.width="0%"
         nameContact.style.width="0%"
 
-        nameServices.style.opacity="0"
-        nameAboutMe.style.opacity="0"
-        nameBudget.style.opacity="0"
-        nameContact.style.opacity="0"
+        nameServices.style.fontSize="0"
+        nameAboutMe.style.fontSize="0"
+        nameBudget.style.fontSize="0"
+        nameContact.style.fontSize="0"
+
+        nameServices.style.visibility="hidden"
+        nameAboutMe.style.visibility="hidden"
+        nameBudget.style.visibility="hidden"
+        nameContact.style.visibility="hidden"
           
 
         nameAboutMe.style.transition="all 1s ease-in-out"
@@ -596,7 +739,7 @@ function addnameSection(services,aboutme,budget,contact,div3,div4,div5,div6){
         
 
 
-
+  /************************************************** */
 
 
 
