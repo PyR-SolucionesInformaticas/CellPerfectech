@@ -179,14 +179,7 @@ var div4=document.createElement("div")
 var div5=document.createElement("div")
 var div6=document.createElement("div")
 
-var div4Container=document.createElement("div")
-var div4ContainerTi=document.createElement("div")
-var div4ContainerP=document.createElement("div")
-var div4ContainerPhoto=document.createElement("div")
-var div4ContainerTiH=document.createElement("h2")
-var div4ContainerTiSub=document.createElement("h3")
-var div4ContainerParrP=document.createElement("p")
-var div4img=document.createElement("img")
+
 
 div.style.width="100%"
 div.style.height="50%"
@@ -260,12 +253,26 @@ div6.style.height="83%"
 div6.style.display="flex"
 div6.style.justifyContent="center"
 div6.style.alignItems="center"
+div6.style.flexDirection="column"
 div6.style.position="fixed"
 div6.style.backgroundColor="#107C1D" 
 div6.style.opacity="0"
 
 
 /*************************About Me*****************************/
+var div4Container=document.createElement("div")
+var div4ContainerTi=document.createElement("div")
+var div4ContainerP=document.createElement("div")
+var div4ContainerPhoto=document.createElement("div")
+var div4ContainerTiH=document.createElement("h2")
+var div4ContainerTiSub=document.createElement("h3")
+var div4ContainerParrP=document.createElement("p")
+var div4img=document.createElement("img")
+
+
+
+
+
 div4Container.style.width="65%"
 div4Container.style.height="100%"
 div4Container.style.display="flex"
@@ -354,6 +361,83 @@ Siempre estoy en constante aprendizaje para ofrecer un servicio de calidad y est
 🔗  Visita CellPerfecTech en instagram y Sigueme Insecto`
 
 /*********************** End About Me*****************************/
+
+
+
+/*************************Contact*********************************/
+var div6ContainerMessages=document.createElement("div")
+var div6Messages=document.createElement("h2")
+var div6ContainerImgForm=document.createElement("div")
+var div6ContainerImg=document.createElement("div")
+var div6Img=document.createElement("img")
+var div6ContainerForm=document.createElement("div")
+var div6Form=document.createElement("form")
+
+div6ContainerMessages.style.width="100%"
+div6ContainerMessages.style.height="15%"
+
+
+div6Messages.style.width="100%"
+div6Messages.style.height="100%"
+div6Messages.style.margin="0"
+div6Messages.style.color="#ffffff"
+div6Messages.style.fontSize="30px"
+div6Messages.style.display="flex"
+div6Messages.style.justifyContent="center"
+div6Messages.style.alignItems="center"
+div6Messages.innerHTML="Enviame tu mensaje Insecto"
+div6Messages.classList.add('inria-sans-regular')
+
+div6ContainerImgForm.style.width="100%"
+div6ContainerImgForm.style.height="85%"
+div6ContainerImgForm.style.display="flex"
+
+
+div6ContainerImg.style.width="40%"
+div6ContainerImg.style.height="100%"
+div6ContainerImg.style.display="flex"
+div6ContainerImg.style.justifyContent="center"
+div6ContainerImg.style.alignItems="center"
+
+div6ContainerForm.style.width="60%"
+div6ContainerForm.style.height="100%"
+
+
+div6Form.style.width="80%"
+div6Form.style.height="95%"
+div6Form.style.border="1px solid white"
+div6Form.style.display="flex"
+div6Form.style.justifyContent="center"
+div6Form.style.alignItems="center"
+
+
+
+
+div6Img.src = "./image/cell.png";
+div6Img.style.width ="280px";
+div6Img.style.cursor="pointer";
+
+
+
+
+
+
+
+
+
+
+
+
+div6.appendChild(div6ContainerMessages)
+div6.appendChild(div6ContainerImgForm)
+
+div6ContainerMessages.appendChild(div6Messages)
+div6ContainerImgForm.appendChild(div6ContainerImg)
+div6ContainerImgForm.appendChild(div6ContainerForm)
+div6ContainerForm.appendChild(div6Form)
+div6ContainerImg.appendChild(div6Img)
+
+/**************************End Contact*****************************/
 main.appendChild(div)
 main.appendChild(div1)
 main.appendChild(div2)
@@ -782,7 +866,7 @@ function home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,b
 {
 
     document.addEventListener('click', function(event) {
-        
+
         if (event.target.classList.contains('logo')) {
 
                 ul.style.opacity="0"
