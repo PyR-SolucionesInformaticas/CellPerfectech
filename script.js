@@ -198,7 +198,6 @@ div2.style.position="fixed"
 div2.style.backgroundPosition="50% 40%"
 div2.style.backgroundSize="30% "
 div2.style.opacity="0.4"
-//div2.style.zIndex="150"
 div2.style.backgroundRepeat="no-repeat"
 div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
 
@@ -371,7 +370,13 @@ var div6ContainerImgForm=document.createElement("div")
 var div6ContainerImg=document.createElement("div")
 var div6Img=document.createElement("img")
 var div6ContainerForm=document.createElement("div")
+var div6FormInputname=document.createElement("input")
+var div6FormInputemail=document.createElement("input")
+var div6InputnamePhone=document.createElement("input")
+var div6Inputnametextarea=document.createElement("textarea")
 var div6Form=document.createElement("form")
+var div6button=document.createElement("button")
+
 
 div6ContainerMessages.style.width="100%"
 div6ContainerMessages.style.height="15%"
@@ -381,16 +386,18 @@ div6Messages.style.width="100%"
 div6Messages.style.height="100%"
 div6Messages.style.margin="0"
 div6Messages.style.color="#ffffff"
-div6Messages.style.fontSize="30px"
+div6Messages.style.fontSize="45px"
 div6Messages.style.display="flex"
 div6Messages.style.justifyContent="center"
 div6Messages.style.alignItems="center"
 div6Messages.innerHTML="Enviame tu mensaje Insecto"
 div6Messages.classList.add('inria-sans-regular')
 
+
 div6ContainerImgForm.style.width="100%"
 div6ContainerImgForm.style.height="85%"
 div6ContainerImgForm.style.display="flex"
+
 
 
 div6ContainerImg.style.width="40%"
@@ -399,34 +406,92 @@ div6ContainerImg.style.display="flex"
 div6ContainerImg.style.justifyContent="center"
 div6ContainerImg.style.alignItems="center"
 
+
 div6ContainerForm.style.width="60%"
 div6ContainerForm.style.height="100%"
 
 
+
+
 div6Form.style.width="80%"
 div6Form.style.height="95%"
-div6Form.style.border="1px solid white"
 div6Form.style.display="flex"
+div6Form.style.flexDirection="column"
 div6Form.style.justifyContent="center"
 div6Form.style.alignItems="center"
-
+div6Form.action="send.php"
 
 
 
 div6Img.src = "./image/cell.png";
-div6Img.style.width ="280px";
+div6Img.style.width ="350px";
 div6Img.style.cursor="pointer";
 
 
+div6InputnamePhone.style.width="75%"
+div6InputnamePhone.style.height="7%"
+div6InputnamePhone.style.borderRadius="5px"
+div6InputnamePhone.style.margin="2%"
+div6InputnamePhone.style.cursor="pointer"
+div6InputnamePhone.style.fontSize="20px"
+div6InputnamePhone.style.zIndex=160
+div6InputnamePhone.style.paddingLeft="5px"
+div6InputnamePhone.placeholder="Telefono"
+div6InputnamePhone.maxLength="10"
+div6InputnamePhone.type="number"
+div6InputnamePhone.required="true"
+
+
+div6FormInputemail.style.width="75%"
+div6FormInputemail.style.height="7%"
+div6FormInputemail.style.borderRadius="5px"
+div6FormInputemail.style.margin="2%"
+div6FormInputemail.style.cursor="pointer"
+div6FormInputemail.style.fontSize="20px"
+div6FormInputemail.style.paddingLeft="5px"
+div6FormInputemail.placeholder="Email"
+div6FormInputemail.maxLength="25"
+div6FormInputemail.type="email"
+div6FormInputemail.required="true"
 
 
 
 
+div6FormInputname.style.width="75%"
+div6FormInputname.style.height="7%"
+div6FormInputname.style.borderRadius="5px"
+div6FormInputname.style.margin="2%"
+div6FormInputname.style.cursor="pointer"
+div6FormInputname.style.fontSize="20px"
+div6FormInputname.style.paddingLeft="5px"
+div6FormInputname.placeholder="Nombre"
+div6FormInputname.maxLength="15"
+div6FormInputname.type="text"
+div6FormInputname.required="true"
 
+div6Inputnametextarea.style.width="75%"
+div6Inputnametextarea.style.height="25%"
+div6Inputnametextarea.style.borderRadius="5px"
+div6Inputnametextarea.style.margin="2%"
+div6Inputnametextarea.style.fontSize="20px"
+div6Inputnametextarea.style.paddingLeft="5px"
+div6Inputnametextarea.style.cursor="pointer"
+div6Inputnametextarea.style.paddingTop="5px"
+div6Inputnametextarea.placeholder="Max 150 caracteres"
+div6Inputnametextarea.type="text"
+div6Inputnametextarea.required="true"
 
-
-
-
+div6button.style="none"
+div6button.style.width="150px"
+div6button.style.height="50px"
+div6button.style.borderRadius="10px"
+div6button.style.fontSize="25px"
+div6button.style.cursor="pointer"
+div6button.type="submit"
+div6button.style.color="#ffffff"
+div6button.style.backgroundColor="#400335"
+div6button.innerHTML="Enviar"
+div6button.classList.add('inter')
 
 div6.appendChild(div6ContainerMessages)
 div6.appendChild(div6ContainerImgForm)
@@ -435,6 +500,16 @@ div6ContainerMessages.appendChild(div6Messages)
 div6ContainerImgForm.appendChild(div6ContainerImg)
 div6ContainerImgForm.appendChild(div6ContainerForm)
 div6ContainerForm.appendChild(div6Form)
+div6ContainerForm.appendChild(div6Form)
+
+div6Form.appendChild(div6FormInputname)
+div6Form.appendChild(div6FormInputname)
+div6Form.appendChild(div6InputnamePhone)
+div6Form.appendChild(div6FormInputemail)
+div6Form.appendChild(div6Inputnametextarea)
+div6Form.appendChild(div6button)
+
+
 div6ContainerImg.appendChild(div6Img)
 
 /**************************End Contact*****************************/
@@ -574,7 +649,7 @@ footer.appendChild(termCond)
 
 
 /***************************End Footer***************************/
-home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,budget,contact,ul)
+home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,budget,contact,ul,div6)
 selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,budget,contact,li,li1,li2,li3,ul,div3,div4,div5,div6)
 selectSectionMouse(nameServices,nameAboutMe,nameBudget,nameContact,nav,div3,div4,div5,div6)
 
@@ -604,7 +679,6 @@ function selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,
             aboutme.style.opacity="0"
             budget.style.opacity="0"
             services.style.opacity="0"
-
             li.style.transition="all 0.5s ease-in-out"
 
             contact.style.transition="all 0.5s ease-in-out"
@@ -636,6 +710,8 @@ function selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,
                 div3.style.height="83%"
                 div3.style.display="flex"
                 div3.style.opacity="1"
+                div6.style.zIndex="0"
+
                 div3.style.transition="all 1s ease-in-out"
                 div4.style.opacity="0"
                 div5.style.opacity="0"
@@ -660,6 +736,8 @@ function selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,
                 div4.style.display="flex"
                 div4.style.transition="all 1s ease-in-out"
                 div4.style.opacity="1"
+                div6.style.zIndex="0"
+                
                 div3.style.opacity="0"
                 div5.style.opacity="0"
                 div6.style.opacity="0"
@@ -681,6 +759,7 @@ function selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,
                 div5.style.display="flex"
                 div5.style.transition="all 1s ease-in-out"
                 div5.style.opacity="1"
+                div6.style.zIndex="0"
             
                 div4.style.opacity="0"
                 div3.style.opacity="0"
@@ -704,6 +783,7 @@ function selectSection(nameServices,nameAboutMe,nameBudget,nameContact,services,
                 div6.style.display="flex"
                 div6.style.transition="all 1s ease-in-out"
                 div6.style.opacity="1"
+                div6.style.zIndex="150"
             
                 div4.style.opacity="0"
                 div3.style.opacity="0"
@@ -841,6 +921,7 @@ document.addEventListener("mouseover", function(event) {
             div6.style.display="flex"
             div6.style.transition="all 1s ease-in-out"
             div6.style.opacity="1"
+            
         
             div4.style.opacity="0"
             div3.style.opacity="0"
@@ -862,7 +943,7 @@ document.addEventListener("mouseover", function(event) {
 
 }
 
-function home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,budget,contact,ul)
+function home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,budget,contact,ul,div6)
 {
 
     document.addEventListener('click', function(event) {
@@ -871,6 +952,7 @@ function home(nameServices,nameAboutMe,nameBudget,nameContact,services,aboutme,b
 
                 ul.style.opacity="0"
                 ul.style.visibility="hidden"
+                div6.style.zIndex="0"
                 
 
                 nameServices.style.width="100%"
