@@ -201,32 +201,87 @@ div2.style.opacity="0.4"
 div2.style.backgroundRepeat="no-repeat"
 div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
 
-
-// document.addEventListener("mouseout", function(event) {
-//     if (event.target.innerText=== "Servicios"&& event.target.innerText&& "Presupuesto"&&event.target.innerText=== "Sobre Mi"||event.target.innerText=== "Contacto") {
-//     // div2.style.opacity="1"
-//     // console.log("hola")
-//     nav.style.border="1px solid red"
-//     div2.style.opacity="0"
-//     div2.style.visibility="hidden"
-//     div2.style.transition="all 0.5s ease-in-out"
-//     }
-// })
-
-
-
+/**************************Services****************************/
 
 div3.style.width="100%"
 div3.style.height="83%"
 div3.style.display="flex"
 div3.style.justifyContent="center"
 div3.style.alignItems="center"
+div3.style.flexDirection="column"
 div3.style.position="fixed"
 div3.style.backgroundColor="#400335"
 div3.style.opacity="0"
 
 
 
+var div3containerdiv=document.createElement("div")
+var div3containerdiv2=document.createElement("div")
+
+var div3containerS=document.createElement("div")
+var div3containerS1=document.createElement("div")
+var div3containerS2=document.createElement("div")
+var div3containerS3=document.createElement("div")
+var div3containerS4=document.createElement("div")
+var div3containerS5=document.createElement("div")
+
+
+div3containerdiv.style.width="100%"
+div3containerdiv.style.height="50%"
+div3containerdiv.style.display="flex"  
+div3containerdiv.style.justifyContent="space-between"
+div3containerdiv.style.alignItems="center"    
+
+div3containerdiv2.style.width="100%"
+div3containerdiv2.style.height="50%"
+div3containerdiv2.style.display="flex" 
+div3containerdiv2.style.justifyContent="space-between" 
+div3containerdiv2.style.alignItems="center"  
+
+div3containerS.style.width="31%"
+div3containerS.style.height="90%"
+div3containerS.style.border="1px solid white"
+
+
+div3containerS1.style.width="31%"
+div3containerS1.style.height="90%"
+div3containerS1.style.border="1px solid white"
+
+div3containerS2.style.width="31%"
+div3containerS2.style.height="90%"
+div3containerS2.style.border="1px solid white"
+
+div3containerS3.style.width="31%"
+div3containerS3.style.height="90%"
+div3containerS3.style.border="1px solid white"
+
+div3containerS4.style.width="31%"
+div3containerS4.style.height="90%"
+div3containerS4.style.border="1px solid white"
+
+div3containerS5.style.width="31%"
+div3containerS5.style.height="90%"
+div3containerS5.style.border="1px solid white"
+
+
+
+
+
+
+
+
+div3.appendChild(div3containerdiv)
+div3.appendChild(div3containerdiv2)
+
+
+div3containerdiv.appendChild(div3containerS)
+div3containerdiv.appendChild(div3containerS1)
+div3containerdiv.appendChild(div3containerS2)
+
+div3containerdiv2.appendChild(div3containerS3)
+div3containerdiv2.appendChild(div3containerS4)
+div3containerdiv2.appendChild(div3containerS5)
+/*************************End services*****************************/
 
 
 div4.style.width="100%"
