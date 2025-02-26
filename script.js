@@ -171,6 +171,8 @@ ul.appendChild(li3);
 
 /***************************Main***************************/
 
+
+
 var div=document.createElement("div")
 var div1=document.createElement("div")
 var div2=document.createElement("div")
@@ -201,6 +203,9 @@ div2.style.opacity="0.4"
 div2.style.backgroundRepeat="no-repeat"
 div2.style.backgroundImage="url('./image/celltech_logoGrande_png.png')"
 
+
+
+
 /**************************Services****************************/
 
 div3.style.width="100%"
@@ -215,16 +220,9 @@ div3.style.opacity="0"
 
 
 
+
 var div3containerdiv=document.createElement("div")
 var div3containerdiv2=document.createElement("div")
-
-var div3containerS=document.createElement("div")
-var div3containerS1=document.createElement("div")
-var div3containerS2=document.createElement("div")
-var div3containerS3=document.createElement("div")
-var div3containerS4=document.createElement("div")
-var div3containerS5=document.createElement("div")
-
 
 div3containerdiv.style.width="100%"
 div3containerdiv.style.height="50%"
@@ -238,49 +236,99 @@ div3containerdiv2.style.display="flex"
 div3containerdiv2.style.justifyContent="space-between" 
 div3containerdiv2.style.alignItems="center"  
 
-div3containerS.style.width="31%"
-div3containerS.style.height="90%"
-div3containerS.style.border="1px solid white"
 
-
-div3containerS1.style.width="31%"
-div3containerS1.style.height="90%"
-div3containerS1.style.border="1px solid white"
-
-div3containerS2.style.width="31%"
-div3containerS2.style.height="90%"
-div3containerS2.style.border="1px solid white"
-
-div3containerS3.style.width="31%"
-div3containerS3.style.height="90%"
-div3containerS3.style.border="1px solid white"
-
-div3containerS4.style.width="31%"
-div3containerS4.style.height="90%"
-div3containerS4.style.border="1px solid white"
-
-div3containerS5.style.width="31%"
-div3containerS5.style.height="90%"
-div3containerS5.style.border="1px solid white"
-
-
-
-
-
-
-
-
-div3.appendChild(div3containerdiv)
+div3.appendChild(div3containerdiv) 
 div3.appendChild(div3containerdiv2)
 
+for(i=0;i<=5;i++){
 
-div3containerdiv.appendChild(div3containerS)
-div3containerdiv.appendChild(div3containerS1)
-div3containerdiv.appendChild(div3containerS2)
+    if(i<=2){
+        let div3containerS=document.createElement("div")
+        let div3containerimgh3=document.createElement("div")
+        let div3containerimg=document.createElement("img")
+        let div3containerh3=document.createElement("h3")
+        let div3containername=document.createElement("h3")
+        div.classList.add('card-' + i);
 
-div3containerdiv2.appendChild(div3containerS3)
-div3containerdiv2.appendChild(div3containerS4)
-div3containerdiv2.appendChild(div3containerS5)
+       
+
+        div3containerS.style.width="30%"
+        div3containerS.style.height="90%"
+        div3containerS.style.border="1px solid white" 
+
+        div3containerimgh3.style.width="100%"
+        div3containerimgh3.style.height="85%"
+        div3containerimgh3.style.display="flex"  
+        div3containerimgh3.style.border="1px solid white" 
+
+        
+        div3containerimg.style.width="40%"
+        div3containerimg.style.height="100%"
+        div3containerimg.style.display="flex"  
+        div3containerimg.style.border="1px solid white" 
+
+        div3containerh3.style.width="60%"
+        div3containerh3.style.height="100%"
+        div3containerh3.style.display="flex"  
+        div3containerh3.style.border="1px solid white" 
+
+        div3containername.style.width="100%"
+        div3containername.style.height="15%"
+        div3containername.style.display="flex" 
+        div3containername.style.margin="0"   
+        div3containername.style.border="1px solid black" 
+
+        div3containerdiv.appendChild(div3containerS)
+        div3containerS.appendChild(div3containerimgh3)
+        div3containerS.appendChild(div3containername) 
+        div3containerimgh3.appendChild(div3containerimg)
+
+    }else{
+       
+        let div3containerS=document.createElement("div")
+        let div3containerimgh3=document.createElement("div")
+        let div3containerimg=document.createElement("img")
+        let div3containerh3=document.createElement("h3")
+        let div3containername=document.createElement("h3")
+        div.classList.add('card-' + i);
+
+       
+
+        div3containerS.style.width="30%"
+        div3containerS.style.height="90%"
+        div3containerS.style.border="1px solid white" 
+
+        div3containerimgh3.style.width="100%"
+        div3containerimgh3.style.height="85%"
+        div3containerimgh3.style.display="flex"  
+        div3containerimgh3.style.border="1px solid white" 
+
+        
+        div3containerimg.style.width="40%"
+        div3containerimg.style.height="100%"
+        div3containerimg.style.display="flex"  
+        div3containerimg.style.border="1px solid white" 
+
+        div3containerh3.style.width="60%"
+        div3containerh3.style.height="100%"
+        div3containerh3.style.display="flex"  
+        div3containerh3.style.border="1px solid white" 
+
+        div3containername.style.width="100%"
+        div3containername.style.height="15%"
+        div3containername.style.display="flex" 
+        div3containername.style.margin="0"   
+        div3containername.style.border="1px solid black" 
+
+        div3containerdiv2.appendChild(div3containerS)
+        div3containerS.appendChild(div3containerimgh3)
+        div3containerS.appendChild(div3containername) 
+        div3containerimgh3.appendChild(div3containerimg)
+        
+    }
+      
+}
+
 /*************************End services*****************************/
 
 
