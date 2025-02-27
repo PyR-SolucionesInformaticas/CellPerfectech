@@ -350,6 +350,10 @@ div5.style.position="fixed"
 div5.style.backgroundColor="#ffffff"
 div5.style.opacity="0"
 
+
+
+
+
 div6.style.width="100%"
 div6.style.height="83%"
 div6.style.display="flex"
