@@ -1040,11 +1040,7 @@ document.addEventListener("mouseover", function(event) {
 
         }
     }
-    // if(nameServices.style.visibility=="hidden"||nameAboutMe.style.visibility=="hidden"||nameBudget.style.visibility=="hidden"||nameContact.style.visibility=="hidden"){
-    //     nav.style.border="1px solid red"
-    // }
-
-
+  
 
 });
 
