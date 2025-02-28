@@ -219,16 +219,16 @@ div3.style.backgroundColor="#400335"
 div3.style.opacity="0"
 
 
-
-
 var div3containerdiv=document.createElement("div")
 var div3containerdiv2=document.createElement("div")
+
 
 div3containerdiv.style.width="100%"
 div3containerdiv.style.height="50%"
 div3containerdiv.style.display="flex"  
 div3containerdiv.style.justifyContent="space-between"
-div3containerdiv.style.alignItems="center"    
+div3containerdiv.style.alignItems="center"  
+
 
 div3containerdiv2.style.width="100%"
 div3containerdiv2.style.height="50%"
@@ -246,84 +246,151 @@ for(i=0;i<=5;i++){
         let div3containerS=document.createElement("div")
         let div3containerimgh3=document.createElement("div")
         let div3containerimg=document.createElement("img")
-        let div3containerh3=document.createElement("h3")
+        let div3containerul=document.createElement("ul")
         let div3containername=document.createElement("h3")
-        div.classList.add('card-' + i);
+        
+        
+        div3containerS.classList.add('card-' + i);
 
-       
-
-        div3containerS.style.width="30%"
-        div3containerS.style.height="90%"
-        div3containerS.style.border="1px solid white" 
+        div3containerS.style.width="28%"
+        div3containerS.style.height="80%"
+        div3containerS.style.margin="2%"
+        div3containerS.style.backgroundColor="#ffffff"
+        
 
         div3containerimgh3.style.width="100%"
         div3containerimgh3.style.height="85%"
         div3containerimgh3.style.display="flex"  
-        div3containerimgh3.style.border="1px solid white" 
+        
 
         
-        div3containerimg.style.width="40%"
-        div3containerimg.style.height="100%"
-        div3containerimg.style.display="flex"  
-        div3containerimg.style.border="1px solid white" 
-
-        div3containerh3.style.width="60%"
-        div3containerh3.style.height="100%"
-        div3containerh3.style.display="flex"  
-        div3containerh3.style.border="1px solid white" 
-
         div3containername.style.width="100%"
         div3containername.style.height="15%"
         div3containername.style.display="flex" 
-        div3containername.style.margin="0"   
-        div3containername.style.border="1px solid black" 
+        div3containername.style.justifyContent="center"
+        div3containername.style.alignItems="center"
+        div3containername.style.margin="0" 
+        div3containername.classList.add('inria-sans-regular')
+
+
+        
+        if(div3containerS.classList.value==="card-0"){
+            div3containerimg.src = "./image/consolas.jpg";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="Consolas"
+            
+
+        }else if(div3containerS.classList.value==="card-1"){
+            div3containerimg.src = "./image/celular.jpg";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="Smart Phones"
+
+        }else if(div3containerS.classList.value==="card-2"){
+            div3containerimg.src = "./image/tablet.png";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="Netbook"
+        }
+  
+        div3containerimg.style.width="40%"
+        div3containerimg.style.height="100%"
+        div3containerimg.style.display="flex"  
+        
+
+
+        div3containerul.style.width="60%"
+        div3containerul.style.height="100%"
+        div3containerul.style.display="flex"  
+        div3containerul.style.margin="0"  
+        div3containerul.style.backgroundColor="#000000"  
+        div3containerul.style.borderRadius="0px 0px 0px 10px"  
+
+
+
 
         div3containerdiv.appendChild(div3containerS)
         div3containerS.appendChild(div3containerimgh3)
         div3containerS.appendChild(div3containername) 
         div3containerimgh3.appendChild(div3containerimg)
+        div3containerimgh3.appendChild(div3containerul)
 
     }else{
        
         let div3containerS=document.createElement("div")
         let div3containerimgh3=document.createElement("div")
         let div3containerimg=document.createElement("img")
-        let div3containerh3=document.createElement("h3")
+        let div3containerul=document.createElement("ul")
         let div3containername=document.createElement("h3")
-        div.classList.add('card-' + i);
+        div3containerS.classList.add('card-' + i);
 
-       
-
-        div3containerS.style.width="30%"
-        div3containerS.style.height="90%"
-        div3containerS.style.border="1px solid white" 
+        div3containerS.style.width="28%"
+        div3containerS.style.height="80%"
+        div3containerS.style.margin="2%"
+        div3containerS.style.backgroundColor="#ffffff"
+        
 
         div3containerimgh3.style.width="100%"
         div3containerimgh3.style.height="85%"
         div3containerimgh3.style.display="flex"  
-        div3containerimgh3.style.border="1px solid white" 
 
         
+        div3containername.style.width="100%"
+        div3containername.style.height="15%"
+        div3containername.style.display="flex" 
+        div3containername.style.justifyContent="center"
+        div3containername.style.alignItems="center"
+        div3containername.style.margin="0" 
+        div3containername.classList.add('inria-sans-regular')
+
+
+    
+
+
+        if(div3containerS.classList.value==="card-3"){
+            div3containerimg.src = "./image/tablet.png";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="Ventas de Insumos"
+            
+        }else if(div3containerS.classList.value==="card-4"){
+            div3containerimg.src = "./image/pc.jpg";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="PCs"
+        }else if(div3containerS.classList.value==="card-5"){
+            div3containerimg.src = "./image/medios_pagos.jpg";
+            div3containerimg.style.width ="100px";
+            div3containerimg.style.cursor="pointer";
+            div3containername.innerHTML="Medios de Pagos"
+        }
+       
+
+        div3containerul.style.width="60%"
+        div3containerul.style.height="100%"
+        div3containerul.style.display="flex" 
+        div3containerul.style.margin="0" 
+        div3containerul.style.borderRadius="100px"
+        div3containerul.style.backgroundColor="#000000"  
+        div3containerul.style.borderRadius="0px 0px 0px 10px"  
+
+  
         div3containerimg.style.width="40%"
         div3containerimg.style.height="100%"
         div3containerimg.style.display="flex"  
-        div3containerimg.style.border="1px solid white" 
 
-        div3containerh3.style.width="60%"
-        div3containerh3.style.height="100%"
-        div3containerh3.style.display="flex"  
-        div3containerh3.style.border="1px solid white" 
-
+          
         div3containername.style.width="100%"
         div3containername.style.height="15%"
         div3containername.style.display="flex" 
         div3containername.style.margin="0"   
-        div3containername.style.border="1px solid black" 
 
         div3containerdiv2.appendChild(div3containerS)
         div3containerS.appendChild(div3containerimgh3)
         div3containerS.appendChild(div3containername) 
         div3containerimgh3.appendChild(div3containerimg)
+        div3containerimgh3.appendChild(div3containerul)
         
     }
       
