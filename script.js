@@ -432,6 +432,31 @@ div6.style.backgroundColor="#107C1D"
 div6.style.opacity="0"
 
 
+
+
+
+
+
+
+
+
+
+/*************************Budget*****************************/
+let div3containerS=document.createElement("div")
+let div3containerimgh3=document.createElement("div")
+let div3containerimg=document.createElement("img")
+let div3containerul=document.createElement("ul")
+let div3containername=document.createElement("h3")
+
+
+/*************************End Budget*****************************/
+
+
+
+
+
+
+
 /*************************About Me*****************************/
 var div4Container=document.createElement("div")
 var div4ContainerTi=document.createElement("div")
